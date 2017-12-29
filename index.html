@@ -217,11 +217,11 @@
 				scene.background = new THREE.Color( 0xffffff );
 				birds = [];
 				boids = [];
-				for ( var i = 0; i < 4; i ++ ) {
+				for ( var i = 0; i < 128; i ++ ) {
 					boid = boids[ i ] = new Boid();
-					boid.position.x = Math.random() * 400 - 4;
-					boid.position.y = Math.random() * 400 - 4;
-					boid.position.z = Math.random() * 400 - 4;
+					boid.position.x = Math.random() * 400 - 128;
+					boid.position.y = Math.random() * 400 - 128;
+					boid.position.z = Math.random() * 400 - 128;
 					boid.velocity.x = Math.random() * 2 - 1;
 					boid.velocity.y = Math.random() * 2 - 1;
 					boid.velocity.z = Math.random() * 2 - 1;

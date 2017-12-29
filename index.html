@@ -29,7 +29,7 @@
 		<script src="renderers/Projector.js"></script>
 		<script src="renderers/CanvasRenderer.js"></script>
 
-		<!-- <script src="js/libs/stats.min.js"></script> -->
+		<script src="stats.min.js"></script>
 
 		<script src="obj/Bird.js"></script>
 
@@ -236,9 +236,9 @@
 				renderer.setSize( SCREEN_WIDTH, SCREEN_HEIGHT );
 				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
 				document.body.appendChild( renderer.domElement );
-				//stats = new Stats();
-				//document.getElementById( 'container' ).appendChild(stats.dom);
-				//
+				stats = new Stats();
+				document.getElementById( 'container' ).appendChild(stats.dom);
+				
 				window.addEventListener( 'resize', onWindowResize, false );
 			}
 			function onWindowResize() {
@@ -257,9 +257,9 @@
 			//
 			function animate() {
 				requestAnimationFrame( animate );
-				//stats.begin();
+				stats.begin();
 				render();
-				//stats.end();
+				stats.end();
 			}
 			function render() {
 				for ( var i = 0, il = birds.length; i < il; i++ ) {
